@@ -1,10 +1,6 @@
-**NOTE**: _Sadly this repository is no longer supported or updated by the Styled Components team as of June 2024. If you wish to help develop this code please reach out on Discord or in the [issue](https://github.com/styled-components/vscode-styled-components/issues/275). We can unarchive this repo if we get contributors but until then it will remain the way it is._
-
+**NOTE**: _This is a maintained fork of [styled-components/vscode-styled-components](https://github.com/styled-components/vscode-styled-components), which is no longer updated by the Styled Components team (as of June 2024). This fork is published as [`belfegor.vscode-styled-components-sorteam`](https://marketplace.visualstudio.com/items?itemName=belfegor.vscode-styled-components-sorteam) with updated CSS property support and dependencies._
 
 # vscode-styled-components
-
-Styled Components has moved! Make sure you're downloading it from here:
-https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components. The `jpoissonnier.vscode-styled-components ` version will recieve no more updates.
 
 <a href="https://discord.gg/hfGUrbrxaU">![Discord](https://img.shields.io/discord/818449605409767454?logo=discord)</a>
 
@@ -19,7 +15,7 @@ Uses a CSS grammar built on top of [language-sass](https://github.com/atom/langu
 Inside VSCode, press `Ctrl+P`, and enter:
 
 ```
-ext install vscode-styled-components
+ext install belfegor.vscode-styled-components-sorteam
 ```
 
 It should be the top result.

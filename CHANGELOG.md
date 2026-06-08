@@ -1,5 +1,16 @@
 # Release Notes
 
+## 1.0.1 (08-06-2026)
+
+- New extension logo, generated from the official styled-components favicon
+
+## 1.0.0 (08-06-2026)
+
+Maintained fork, re-published under the `belfegor` publisher. This starts a fresh version line and continues from upstream `styled-components.vscode-styled-components` 1.7.8.
+
+- Updated `vscode-css-languageservice` to 6.3.10 and `@styled/typescript-styled-plugin` to 1.0.1 — adds IntelliSense and validation for modern stable CSS properties (e.g. `text-wrap`, `field-sizing`, `anchor-name`, `position-anchor`, `view-transition-name`, `scrollbar-gutter`)
+- Updated TypeScript to 5.9.x
+
 ## 1.7.8 (03-04-2023)
 
 - Bug fix, update typescript styled plugin to re-enable auto completion
