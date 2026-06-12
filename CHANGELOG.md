@@ -1,5 +1,9 @@
 # Release Notes
 
+## 1.0.3 (12-06-2026)
+
+- Fixed broken extension activation (`Cannot find module './parser/cssParser'`) that disabled all features and caused `command 'extension.insertColonOrSemiColon' not found` on Enter — esbuild bundled the UMD build of `vscode-css-languageservice`, whose factory-scoped `require` calls survive into the bundle unresolved; the build now prefers ESM via `mainFields: ["module", "main"]`
+
 ## 1.0.2 (12-06-2026)
 
 - Fixed `command 'extension.insertColonOrSemiColon' not found` when accepting a completion with Enter in plain `.ts`/`.js` files — bumped `engines.vscode` to `^1.74.0` so VS Code generates implicit activation events for contributed commands (upstream removed the explicit `onCommand:` entry relying on this behavior)

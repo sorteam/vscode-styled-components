@@ -8,6 +8,10 @@ const context = await esbuild
     bundle: true,
     outdir: "dist",
     external: ["vscode"],
+    // Prefer ESM builds: the UMD build of vscode-css-languageservice passes
+    // `require` into a factory function, which esbuild can't trace — relative
+    // requires like './parser/cssParser' survive into the bundle and fail at runtime
+    mainFields: ["module", "main"],
     format: "cjs",
     sourcemap: !production,
     minify: production,
