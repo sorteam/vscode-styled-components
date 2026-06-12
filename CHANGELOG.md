@@ -1,5 +1,9 @@
 # Release Notes
 
+## 1.0.2 (12-06-2026)
+
+- Fixed `command 'extension.insertColonOrSemiColon' not found` when accepting a completion with Enter in plain `.ts`/`.js` files — bumped `engines.vscode` to `^1.74.0` so VS Code generates implicit activation events for contributed commands (upstream removed the explicit `onCommand:` entry relying on this behavior)
+
 ## 1.0.1 (08-06-2026)
 
 - New extension logo, generated from the official styled-components favicon
