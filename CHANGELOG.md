@@ -1,5 +1,14 @@
 # Release Notes
 
+## 1.0.4 (15-09-2026)
+
+Maintenance release. No user-facing changes — `vscode-css-languageservice` (6.3.10) and `@styled/typescript-styled-plugin` (1.0.1) are both already at their latest stable versions, so CSS property IntelliSense and validation are unchanged. The shipped dependency tree is identical to 1.0.3; only build and CI tooling was updated.
+
+- Aligned `@types/vscode` with `engines.vscode` (`^1.74.0`) — the types were pinned below the declared minimum VS Code version
+- Updated build tooling: esbuild 0.19 → 0.28, `@vscode/test-electron` 2 → 3, husky 7 → 9
+- Raised the Node version for local development and CI to 22, required by `@vscode/test-electron` 3
+- Updated GitHub Actions (`checkout` v2 → v7, `setup-node` v3 → v5) and switched the release workflow to the renamed `@vscode/vsce` package
+
 ## 1.0.3 (12-06-2026)
 
 - Fixed broken extension activation (`Cannot find module './parser/cssParser'`) that disabled all features and caused `command 'extension.insertColonOrSemiColon' not found` on Enter — esbuild bundled the UMD build of `vscode-css-languageservice`, whose factory-scoped `require` calls survive into the bundle unresolved; the build now prefers ESM via `mainFields: ["module", "main"]`

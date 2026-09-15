@@ -8,3 +8,7 @@ src/**
 .nvmrc
 .editorConfig
 build.mjs
+.husky/**
+.prettierignore
+tsconfig.json
+package-lock.json
